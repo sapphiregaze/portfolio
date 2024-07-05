@@ -27,6 +27,9 @@ const themeOptions: ThemeOptions = {
       paper: "#D4C7B0",
     },
   },
+  typography: {
+    fontFamily: "Zilla Slab",
+  },
 };
 
 const defaultTheme: Theme = createTheme(themeOptions);

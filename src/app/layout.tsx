@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Zilla_Slab } from "next/font/google";
 
 import "./globals.css";
-import ThemeProviderWrapper from "../components/ThemeProviderWrapper";
+import { ThemeProviderWrapper } from "../components/ThemeProviderWrapper";
 
 const zilla = Zilla_Slab({ weight: "400", subsets: ["latin"] });
 
