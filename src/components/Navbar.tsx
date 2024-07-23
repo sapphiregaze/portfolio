@@ -1,15 +1,41 @@
-import { AppBar, Box, Button, Container, Toolbar } from "@mui/material";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
+import { AppBar, Box, Button, Container, Toolbar } from "@mui/material";
+
 export const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const items = [
     { label: "About", link: "/about" },
     { label: "Projects", link: "/project" },
     { label: "Contact", link: "/contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <AppBar elevation={0} sx={{ backgroundColor: "transparent" }}>
+    <AppBar
+      elevation={0}
+      sx={{
+        backgroundColor: isScrolled ? "#D4C7B0" : "transparent",
+        transition: "background-color 0.3s",
+      }}
+    >
       <Container maxWidth="xl">
         <Box sx={{ display: "flex" }}>
           <Box
