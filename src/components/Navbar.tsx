@@ -1,10 +1,11 @@
 import { AppBar, Box, Button, Container, Toolbar } from "@mui/material";
+import Link from "next/link";
 
 export const Navbar = () => {
   const items = [
-    { label: "About", link: "#about" },
-    { label: "Projects", link: "#projects" },
-    { label: "Contact", link: "#contact" },
+    { label: "About", link: "/about" },
+    { label: "Projects", link: "/project" },
+    { label: "Contact", link: "/contact" },
   ];
 
   return (
@@ -14,7 +15,7 @@ export const Navbar = () => {
           <Box
             component="img"
             alt="A PNG of the word SapphireGaze."
-            src="sapphiregaze.png"
+            src="/sapphiregaze.png"
             sx={{
               padding: 3,
               height: "auto",
@@ -30,7 +31,7 @@ export const Navbar = () => {
                   variant="text"
                   sx={{ color: "#002F00", margin: 1, fontSize: 20 }}
                 >
-                  {item.label}
+                  <Link href={item.link}>{item.label}</Link>
                 </Button>
               ))}
             </Box>
