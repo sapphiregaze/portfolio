@@ -71,8 +71,8 @@ export default function Navbar() {
                       {section}
                     </Link>
                   )}
-                  <Button className="rounded-none border-2 border-black dark:border-white bg-black dark:bg-white text-white dark:text-black hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-colors w-full mt-4">
-                    GitHub
+                  <Button className="rounded-none border-2 border-black dark:border-white bg-black dark:bg-white text-white dark:text-black hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-colors w-full mt-4" asChild>
+                    <Link href={"https://github.com/sapphiregaze"}>GitHub</Link>
                   </Button>
                 </nav>
               </SheetContent>
