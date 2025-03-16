@@ -10,7 +10,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
   return (
     <div className="border border-black dark:border-white bg-white dark:bg-[#1a1a1a] p-6 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] transition-all duration-300">
-      <div className="flex justify-between items-start mb-4">
+      <div className="flex justify-between items-start mb-2">
         <h3 className="text-xl font-bold">{title}</h3>
         <a
           href={link}

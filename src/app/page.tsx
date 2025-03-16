@@ -4,6 +4,7 @@ import { ArrowUp } from "lucide-react"
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
+import ProjectCard from "@/components/ProjectCard"
 import TypewriterEffect from "@/components/TypewriterEffect"
 
 import { cn } from "@/lib/utils"
@@ -12,6 +13,27 @@ const skills =
   ["Golang", "TypeScript", "Next.js", "React.js",
     "Tailwind CSS", "SQL", "Rust", "Nix", "Linux",
     "Docker", "C/C++", "Shell", "Python", "Git"];
+
+const projects = [
+  {
+    title: "Syntinel Nyx",
+    description: "IT Automation Platform for Simplified Asset Management, Vulnerability Detection, and Patch Application.",
+    link: "https://www.syntinel.dev/",
+    tags: ["Golang", "TypeScript", "Next.js", "Tailwind CSS"],
+  },
+  {
+    title: "Reverie",
+    description: "Cross-Platform Application That Gamifies Self-Care and Productivity.",
+    link: "https://devpost.com/software/reverie-zy25ls/",
+    tags: ["TypeScript", "Next.js", "Express.js", "PostgreSQL"],
+  },
+  {
+    title: "Discord GoRP",
+    description: "Custom Discord Rich Presence Manager for Linux.",
+    link: "https://github.com/sapphiregaze/discord-gorp/",
+    tags: ["Golang", "Linux", "Shell"],
+  },
+];
 
 export default function Home() {
   const [showButton, setShowButton] = useState(false)
@@ -88,6 +110,26 @@ export default function Home() {
                 )}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="container mx-auto px-4 py-20 border-t border-black dark:border-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center">
+            <span className="mr-4 text-sm opacity-50 font-mono">02</span>
+            PROJECTS
+          </h2>
+          <div className="grid gap-8">
+            {projects.map((project, i) =>
+              <ProjectCard
+                key={i}
+                title={project.title}
+                description={project.description}
+                link={project.link}
+                tags={project.tags}
+              />
+            )}
           </div>
         </div>
       </section>
