@@ -41,6 +41,7 @@ export default function ContactForm() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Origin': 'https://www.sapphiregaze.dev'
         },
         body: JSON.stringify(data)
       })
