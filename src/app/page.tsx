@@ -102,8 +102,9 @@ export default function Home() {
 
       <Button
         onClick={scrollToTop}
+        variant="outline"
         className={cn(
-          "fixed bottom-6 right-6 rounded-full p-3 bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-all duration-300 shadow-lg",
+          "fixed bottom-6 right-6 p-3 rounded-none border-2 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 shadow-lg",
           showButton ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none",
         )}
         aria-label="Back to top"
