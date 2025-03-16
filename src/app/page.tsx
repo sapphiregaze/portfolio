@@ -8,6 +8,7 @@ import ProjectCard from "@/components/ProjectCard"
 import TypewriterEffect from "@/components/TypewriterEffect"
 
 import { cn } from "@/lib/utils"
+import ContactForm from "@/components/ContactForm"
 
 const skills =
   ["Golang", "TypeScript", "Next.js", "React.js",
@@ -130,6 +131,21 @@ export default function Home() {
                 tags={project.tags}
               />
             )}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="container mx-auto px-4 py-20 border-t border-black dark:border-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 flex items-center">
+            <span className="mr-4 text-sm opacity-50 font-mono">03</span>
+            CONTACT
+          </h2>
+          <div className="border border-black dark:border-white p-8 bg-white dark:bg-[#1a1a1a]">
+            <p className="mb-6 leading-relaxed">
+              Interested in working together? Feel free to send me a message!
+            </p>
+            <ContactForm />
           </div>
         </div>
       </section>
