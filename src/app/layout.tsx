@@ -14,8 +14,11 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "SapphireGaze",
-  description: "SapphireGaze's Portfolio",
+  title: "sapphiregaze",
+  description: "despite everything, it's still you",
+  openGraph: {
+    images: ["https://www.sapphiregaze.dev/opengraph.png"],
+  },
 };
 
 export default function RootLayout({
