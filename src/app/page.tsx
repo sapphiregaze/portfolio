@@ -5,10 +5,10 @@ import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
 import ProjectCard from "@/components/ProjectCard"
+import ContactForm from "@/components/ContactForm"
 import TypewriterEffect from "@/components/TypewriterEffect"
 
 import { cn } from "@/lib/utils"
-import ContactForm from "@/components/ContactForm"
 
 const skills =
   ["Golang", "TypeScript", "Next.js", "React.js",
@@ -151,7 +151,7 @@ export default function Home() {
       </section>
 
       <footer className="container mx-auto px-4 py-8 border-t border-black dark:border-white">
-        <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-center items-center">
           <div className="mb-4 md:mb-0">
             <p>© 2025 SapphireGaze. All Rights Reserved.</p>
           </div>

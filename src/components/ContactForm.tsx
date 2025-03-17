@@ -59,6 +59,7 @@ export default function ContactForm() {
       toast.error("Something went wrong.", {
         description: "Your message couldn't be sent. Please try again.",
       })
+      console.log(error)
     } finally {
       setIsSubmitting(false)
     }
