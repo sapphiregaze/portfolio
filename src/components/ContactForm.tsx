@@ -51,13 +51,17 @@ export default function ContactForm() {
           description: "Thank you for your message. I'll get back to you soon.",
         })
         form.reset()
+      } else if (response.status === 429) {
+        toast.error("Too many requests :(", {
+          description: "Please try again in a minute.",
+        })
       } else {
         const errorData = await response.json()
         throw new Error(errorData.error || "Failed to submit form")
       }
     } catch (error) {
       toast.error("Something went wrong.", {
-        description: "Your message couldn't be sent. Please try again.",
+        description: "Your message couldn't be sent.",
       })
       console.log(error)
     } finally {
