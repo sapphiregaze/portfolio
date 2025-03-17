@@ -67,7 +67,7 @@ export default function Home() {
             <TypewriterEffect text="Hey, I'm Jasmine!" />
           </h1>
           <p className="text-lg md:text-xl mb-8 leading-relaxed">
-            Sleep deprived developer who make silly ideas a reality.
+            Sleep deprived developer who makes silly ideas a reality.
             Incoming SWE intern @ Baker Hughes.
           </p>
           <div className="flex flex-wrap gap-4">
