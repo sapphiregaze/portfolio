@@ -28,6 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <script defer src="https://umami.sapphiregaze.dev/script.js" data-website-id="7018053a-c964-49ec-9fe6-ae183a349ded"></script>
       <body
         className={`${jetbrainsMono.className} antialiased`}
       >
