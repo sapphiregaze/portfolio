@@ -12,10 +12,10 @@ import { Textarea } from "@/components/ui/textarea"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  subject: z.string().min(3, { message: "Subject must be at least 3 characters." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }).max(50, { message: "Name must be shorter than 50 characters." }),
+  email: z.string().email({ message: "Please enter a valid email address." }).max(50, { message: "Email must be shorter than 50 characters." }),
+  subject: z.string().min(3, { message: "Subject must be at least 3 characters." }).max(100, { message: "Subject must be shorter than 100 characters." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }).max(500, { message: "Message must be shorter than 500 characters." }),
 })
 
 type FormValues = z.infer<typeof formSchema>
