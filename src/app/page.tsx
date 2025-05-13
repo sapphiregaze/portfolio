@@ -78,7 +78,7 @@ export default function Home() {
             SAPPHIREGAZE / 2025
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-8">
-            <TypewriterEffect text="Hey, I'm Jasmine!" />
+            <TypewriterEffect text="Hey, I'm Jas!" />
           </h1>
           <p className="text-lg md:text-xl mb-8 leading-relaxed">
             Sleep deprived developer who makes silly ideas a reality.
